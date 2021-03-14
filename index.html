@@ -1,0 +1,168 @@
+<html>
+  <head>
+    <title>Family Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body onload="start()" class="background">
+    <nav class="navbar-inverse" style="position:sticky;top:0;z-index:99999">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#family">Family</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#view">Webcam View</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+              <li><a href="#ach">Achievements</a></li>
+              <li><a href="#details">Business Details</a></li>
+          </ul>
+      </div>
+  </nav>
+    <div class="container">
+    <center>
+      <marquee>My Family</marquee>
+      <section id="family">
+        <h3 class="h btn btn-info">Family 
+          <br>
+          <span>&#x1F467;</span>
+          <span>&#x1F468;</span>
+          <span>&#x1F469;</span>
+          <span>&#x1F466;</span>
+        </h3>
+        <br><br>
+        <span>&#x1F467; - Jiya</span>
+        <span>&#x1F468; - Father</span>
+        <span>&#x1F469; - Mother</span>
+        <span>&#x1F466; - Brother</span>
+        <br><br>
+        <img src="Family pic.JPG" id="family_pic_img">
+      </section>
+      <section id="view">
+        <label>Webcam View :</label>
+        <div id="camera"></div>
+        <br>
+        <button onclick="capture()" class="btn btn-info">Capture</button>
+        <br><br>
+        <label>Snapshot :</label>
+        <div id="result"></div>
+        <br>
+        <button onclick="identify()" class="btn btn-success">Identify</button>
+        <br>
+        <h4>Name : <span id="object"></span></h4>
+        <h4>Accuracy : <span id="acc"></span></h4>
+      </section>
+      <br><br>
+      <section id="gallery">
+        <h2>Gallery</h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <center>
+                    <div class="carousel-content">
+                        <img class="gallery1" src="Statue of unity.JPG">
+                    </div>
+                    <div class="carousel-content">
+                        <p>Me & My brother at the Staue of unity</p>
+                    </div>
+                </center>
+            </div>
+            <div class="item">
+                <center>
+                    <div class="carousel-content">
+                        <img src="Mama, papa and jiya.PNG">
+                    </div>
+                    <div class="carousel-content">
+                        <p>Me, My dad and My uncle</p>
+                    </div>
+                </center>
+            </div>
+            <div class="item">
+                <center>
+                    <div class="carousel-content">
+                        <img class="gallery1" src="Mom, jiyu and rajveer.jpg">
+                    </div>
+                    <div class="carousel-content">
+                        <p>Me, My brother and My Mom</p>
+                    </div>
+                </center>
+            </div>
+            <div class="item">
+                <center>
+                    <div class="carousel-content">
+                        <img class="gallery1" src="milkshake .jpg">
+                    </div>
+                    <div class="carousel-content">
+                        <p>My Father</p>
+                    </div>
+                </center>
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+    </div>
+    </section>
+    <br>
+    <section id="details">
+      <h2>Business Details</h2>
+      <h4>Here are some Details about My Father's Business</h4>
+      <br>
+      <p>We are the manufacture of casting furnace. We have solution for your casting needs. Copper, brass, zinc, aluminum, Copper rod, tube, strip, brass rod tube, strip, zinc ingot, zinc wire and aluminum ingot or aluminum wire. We have coreless and coretype induction furnace. Regards, J.D.Impex “your casting partner”</p><br>
+       <div class="line"></div>
+  <a class="article" href="https://www.indiamart.com/jdimpexvapi/profile.html">
+      India Mart</a>
+  <br>
+  </section>
+  <br><br>
+  <section id="ach">
+    <div class="page-header" col-lg-12 col-md-12 col-sm-12 col-xs-12 id="achievements">
+        <h2 class="text-capitalize">Achievements</h2>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-success col-lg-12 col-md-12 col-sm-12 col-xs-12 environment_li">
+            <h4>University Acheivement</h4>
+            <img class="img-responsive col-lg-5 col-md-5 col-sm-5 col-xs-12" src="achievement by mom.JPG" id="mom_image">
+            <p class="list-group-item-text col-lg-7 col-md-7 col-sm-7 col-xs-12">Post graduated in Biomedical Science with Medical Microbiology as a special subject.. carried out research on normal microbiota of a tongue among healthy smokers and non smokers.. other degrees and achievements - Certificate in accounting,pgdiploma in Nano-biotechnology, DECE- diploma in early child Care and Education, BSc in Medical Technology</p>
+        </li>
+        <li class="list-group-item list-group-item-warning col-lg-12 col-md-12 col-sm-12 col-xs-12 environment_li">
+            <h4>Fancy Dress </h4>
+            <img class="img-responsive col-lg-5 col-md-5 col-sm-5 col-xs-12" src="achievement 1 by jiya.JPG">
+            <p class="list-group-item-text col-lg-7 col-md-7 col-sm-7 col-xs-12">My school decieded to held a Fancy Dress competition when I was in grade 2. I wanted to be Thresa May. And I also had to learn a very long speech. Then My friend told me that Why did you have to speak a very long speech. I won a third prize and was very happy and exicted to show my family cause it was my first Reward. That was the happiest moment of my Life.</p>
+        </li>
+        <li class="list-group-item list-group-item-warning col-lg-12 col-md-12 col-sm-12 col-xs-12 environment_li">
+            <h4>Academic Award</h4>
+            <img class="img-responsive col-lg-5 col-md-5 col-sm-5 col-xs-12" src="achievement by Jiya 2.jpg">
+            <p class="list-group-item-text col-lg-7 col-md-7 col-sm-7 col-xs-12">When I was in Grade 3. My school held a Annual Day on 31st Jan 2020. I love to Perform on the stage. At the end of the show they gave me a Academic award in front of everyone. Yay!!</p>
+        </li>
+    </ul>
+  </section>
+    </center>
+  </div>
+<script src="main.js"></script>
+
+  </body>
+</html>

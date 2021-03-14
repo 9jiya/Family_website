@@ -1,0 +1,19 @@
+.h{
+    font-size: 18px;
+    border-radius: 10px;
+    letter-spacing: 10px;
+  }
+#camera , #result
+{
+  border: 2px dashed black;
+  box-shadow: 5px 5px 15px yellow;
+  width: 350px;
+  height: 300px; 
+}
+#family_pic_img{
+  width: 40%;
+  height: 80%;
+}
+#gallery{
+  background: linear-gradient(#f50add, #eb9b13);
+}
